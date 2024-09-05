@@ -17,16 +17,19 @@ public class App
        //int age = 20;
        //boolean isOnline = false;
        //System.out.println(name);
-
        
-       System.out.println("Ievadi savu vārdu");
-       String name = scanner.nextLine();
-       System.out.println("Ievadi savu uzvārdu");
-       String uzvards = scanner.nextLine();
-       System.out.println("Ievadi savu grupas nosaukumu");
-       String grupa = scanner.nextLine();
+        System.out.println("Chicken:");
+        String chicken = scanner.nextLine();
+        System.out.println("Bacon(kg)");
+        String bekons = scanner.nextLine();
+        System.out.println("Tractor:");
+        String traktors = scanner.nextLine();
+        System.out.println(chicken);
 
-       System.out.println(name +" "+ uzvards +" "+ grupa);
+        System.out.println("And finally, a summary");
+        System.out.println(chicken);
+        System.out.println(bekons);
+        System.out.println(traktors);
        
 
 
