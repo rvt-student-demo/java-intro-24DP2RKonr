@@ -11,18 +11,18 @@ public class App
 {
     public static void main( String[] args )
     {
-         Scanner scanner = new Scanner(System.in);
+        
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Ievadi savu vārdu: ");
-        String name = scanner.nextLine();
+        System.out.println("Give the first number: ");
+        int first = Integer.valueOf(scanner.nextLine());
 
-        System.out.println("Ievadi savu uzvārdu: ");
-        String lastname = scanner.nextLine();
+        System.out.println("Give the second number: ");
+        int second = Integer.valueOf(scanner.nextLine());
 
-        System.out.println("Ievadi savu grupu: ");
-        String group = scanner.nextLine();
+        
 
-        System.out.println("Students: "+ name + " " + lastname + ", " + group);
+        System.out.println(first + " + " + second + " = " + (first+second) );
         
 
     }
