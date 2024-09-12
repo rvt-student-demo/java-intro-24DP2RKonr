@@ -23,8 +23,9 @@ public class App
         
 
         System.out.println(first + " + " + second + " = " + (first+second) );
-        
-
+        System.out.println(first + " - " + second + " = " + (first-second) );
+        System.out.println(first + " * " + second + " = " + (first*second) );
+        System.out.println(first + " / " + second + " = " + ((double)first/second) );
     }
 
 }
