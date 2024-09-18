@@ -14,18 +14,34 @@ public class App
         
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Give the first number: ");
-        int first = Integer.valueOf(scanner.nextLine());
+        System.out.println("Norādiet punktus[0-100] ");
 
-        System.out.println("Give the second number: ");
-        int second = Integer.valueOf(scanner.nextLine());
+        int punkti = Integer.valueOf(scanner.nextLine());
 
-        
-
-        System.out.println(first + " + " + second + " = " + (first+second) );
-        System.out.println(first + " - " + second + " = " + (first-second) );
-        System.out.println(first + " * " + second + " = " + (first*second) );
-        System.out.println(first + " / " + second + " = " + ((double)first/second) );
+        if (punkti < 0) {
+            System.out.println("Grade: Imposible");
+        }
+        else if (punkti < 49) {
+            System.out.println("Grade: failed");
+        }
+        else if (punkti < 59 ) {
+            System.out.println("Grade: 1");
+        }
+        else if (punkti < 69 ) {
+            System.out.println("Grade: 2");
+        }
+        else if (punkti < 79 ) {
+            System.out.println("Grade: 3");
+        }
+        else if (punkti < 89 ) {
+            System.out.println("Grade: 4");
+        }
+        else if (punkti < 100 ) {
+            System.out.println("Grade: 5");
+        }
+        else if (punkti > 100) {
+            System.out.println("Grade: incredible");    
+        }   
     }
-
+    
 }
