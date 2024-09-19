@@ -14,34 +14,30 @@ public class App
         
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Norādiet punktus[0-100] ");
+       
+        System.out.print("Value of the gift? ");
+        String password = scanner.nextLine();
 
-        int punkti = Integer.valueOf(scanner.nextLine());
+       int value = Integer.valueOf(scanner.nextLine());
 
-        if (punkti < 0) {
-            System.out.println("Grade: Imposible");
-        }
-        else if (punkti < 49) {
-            System.out.println("Grade: failed");
-        }
-        else if (punkti < 59 ) {
-            System.out.println("Grade: 1");
-        }
-        else if (punkti < 69 ) {
-            System.out.println("Grade: 2");
-        }
-        else if (punkti < 79 ) {
-            System.out.println("Grade: 3");
-        }
-        else if (punkti < 89 ) {
-            System.out.println("Grade: 4");
-        }
-        else if (punkti < 100 ) {
-            System.out.println("Grade: 5");
-        }
-        else if (punkti > 100) {
-            System.out.println("Grade: incredible");    
-        }   
+       if (value < 5000) {
+        System.out.println("There is no tax for this gift.");
+    } else if (value >= 5000 && value < 25000) {
+        double tax = 100 + (value - 5000) * 0.08;
+        System.out.println("The gift tax is:"+ tax);
+    } else if (value >= 55000) {
+        double tax = 1700 + (value - 25000) * 0.10;
+        System.out.println("The gift tax is: "+ tax);
+    } else if (value >= 200000) {
+        double tax = 4700 + (value - 55000) * 0.12;
+        System.out.println("The gift tax is: "+ tax);
+    } else if (value >= 1000000) {
+        double tax = 22100 + (value - 200000) * 0.15;
+        System.out.println("The gift tax is: "+ tax);
+    } else  {
+        double tax = 142100 + (value - 1000000) * 0.17;
+        System.out.println("The gift tax is: "+ tax);
     }
-    
+
+    }
 }
