@@ -15,29 +15,23 @@ public class App
         Scanner scanner = new Scanner(System.in);
 
        
-        System.out.print("Value of the gift? ");
-        String password = scanner.nextLine();
+        System.out.print("Give a number: ");
 
        int value = Integer.valueOf(scanner.nextLine());
 
-       if (value < 5000) {
-        System.out.println("There is no tax for this gift.");
-    } else if (value >= 5000 && value < 25000) {
-        double tax = 100 + (value - 5000) * 0.08;
-        System.out.println("The gift tax is:"+ tax);
-    } else if (value >= 55000) {
-        double tax = 1700 + (value - 25000) * 0.10;
-        System.out.println("The gift tax is: "+ tax);
-    } else if (value >= 200000) {
-        double tax = 4700 + (value - 55000) * 0.12;
-        System.out.println("The gift tax is: "+ tax);
-    } else if (value >= 1000000) {
-        double tax = 22100 + (value - 200000) * 0.15;
-        System.out.println("The gift tax is: "+ tax);
-    } else  {
-        double tax = 142100 + (value - 1000000) * 0.17;
-        System.out.println("The gift tax is: "+ tax);
+       while (true) {
+        System.out.print("Give a number: ");
+        int number = scanner.nextInt();
+        
+        if (number < 0) {
+            System.out.println("Unsuitable number");
+        } else if (number == 0) {
+            break;
+        } else {
+            System.out.println(number * number);
+        }
     }
-
-    }
+    
+    scanner.close();
+}
 }
