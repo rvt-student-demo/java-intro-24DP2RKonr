@@ -14,24 +14,24 @@ public class App
         
         Scanner scanner = new Scanner(System.in);
 
-       
-        System.out.print("Give a number: ");
-
-       int value = Integer.valueOf(scanner.nextLine());
-
-       while (true) {
-        System.out.print("Give a number: ");
-        int number = scanner.nextInt();
+                int count = 0;
+                int sum = 0;
         
-        if (number < 0) {
-            System.out.println("Unsuitable number");
-        } else if (number == 0) {
-            break;
-        } else {
-            System.out.println(number * number);
+                while (true) {
+                    System.out.print("Give a number:\n");
+                    int number = scanner.nextInt();
+        
+                    if (number == 0) {
+                        break;
+                    }
+        
+                    count++;
+                    sum += number;
+                }
+        
+                System.out.println("Number of numbers: " + count);
+                System.out.println("Sum of the numbers: " + sum);
+                scanner.close();
+            }
         }
-    }
-    
-    scanner.close();
-}
-}
+     
