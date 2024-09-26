@@ -12,13 +12,17 @@ public class App
     public static void main( String[] args )
     { 
         Scanner scanner = new Scanner(System.in);
-            System.out.println("Give a number: ");
-            int number = scanner.nextInt();  
-            int factorial = 1;
-            for (int i = 1; i <= number; i++) {
-                 factorial *= i;
-             }
-            System.out.println("Factorial: " + factorial);  
-            scanner.close();  
+        System.out.println("Give numbers:");
+        int Sum = 0;
+        while (true) {
+            int number = scanner.nextInt(); 
+            if (number == -1) {  
+                break; 
+    
             }
-        }   
+            Sum = Sum + number;
+        }
+        System.out.println("Thx! Bye!");  
+            System.out.println("Sum: " + Sum);
+    }
+}
