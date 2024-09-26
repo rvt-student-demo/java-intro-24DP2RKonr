@@ -13,25 +13,14 @@ public class App
     {
         
         Scanner scanner = new Scanner(System.in);
-
-                int count = 0;
-                int sum = 0;
-        
-                while (true) {
-                    System.out.print("Give a number:\n");
-                    int number = scanner.nextInt();
-        
-                    if (number == 0) {
-                        break;
-                    }
-        
-                    count++;
-                    sum += number;
-                }
-        
-                System.out.println("Number of numbers: " + count);
-                System.out.println("Sum of the numbers: " + sum);
-                scanner.close();
+       
+        System.out.println("Ievadiet skaitli no kura sāks skaitīt:");
+        int sk = scanner.nextInt();
+        for (int i = sk; i <= 100; i++) {
+             System.out.println(i);
             }
+        
         }
+}
+        
      
