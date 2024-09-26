@@ -10,17 +10,15 @@ public class App
 
 {
     public static void main( String[] args )
-    {
-        
+    { 
         Scanner scanner = new Scanner(System.in);
-       
-        System.out.println("Ievadiet skaitli no kura sāks skaitīt:");
-        int sk = scanner.nextInt();
-        for (int i = sk; i <= 100; i++) {
-             System.out.println(i);
+            System.out.println("Give a number: ");
+            int number = scanner.nextInt();  
+            int factorial = 1;
+            for (int i = 1; i <= number; i++) {
+                 factorial *= i;
+             }
+            System.out.println("Factorial: " + factorial);  
+            scanner.close();  
             }
-        
-        }
-}
-        
-     
+        }   
