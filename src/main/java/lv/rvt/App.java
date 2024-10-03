@@ -9,19 +9,19 @@ import javax.swing.plaf.synth.SynthStyle;
 public class App 
 
 {
-    public static void main( String[] args )
-    { 
-        Scanner scanner = new Scanner(System.in);
-        
-            System.out.println("How many times?");
-            int times = scanner.nextInt();
-            int count = 0;
-            while (count < times) {
-                printText();
-                count++;
+    public class Main {
+
+        public static void main(String[] args) {
+            PrintUntilNumber(5);
+        }
+    
+        public static void PrintUntilNumber(int first) {
+            int i = 1;
+            while (i != first + 1) {
+                System.out.println(i);
+                i++;
             }
         }
-        public static void printText() {
-            System.out.println("In a hole in the ground there lived a method");
-        }
     }
+    
+            }
