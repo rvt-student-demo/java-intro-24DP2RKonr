@@ -10,7 +10,6 @@ public class Stars {
             i++;
             System.out.print("*");
         }
-        System.out.println();
     }
 
     public static void printSquare(int size)  {
@@ -21,6 +20,17 @@ public class Stars {
         }
         
     }
+    public static void printRectangle(int width, int height) {
+        for (int r = 0; r<height; r++) {
+            printStars(width);
+            System.out.println();
+        }
+    }
+    public static void printTriangle(int size) {
+        for (int i = 1; i <= size; i++) {
+            printStars(i);
+            System.out.println();
+    }
+    }
 }
-        
 
