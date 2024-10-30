@@ -4,38 +4,34 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Random random = new Random();
-        Scanner scanner = new Scanner(System.in);
+        
+        DecreasingCounter counter1 = new DecreasingCounter(10);
+        System.out.println("Part 1:");
+        counter1.printValue();    
+        counter1.decrement();
+        counter1.printValue();    
+        counter1.decrement();
+        counter1.printValue();    
 
-        int targetNumber = random.nextInt(10) + 1;
-        int attempts = 3;
+        DecreasingCounter counter2 = new DecreasingCounter(2);
+        System.out.println("\nPart 2:");
+        counter2.printValue();    
+        counter2.decrement();
+        counter2.printValue();    
+        counter2.decrement();
+        counter2.printValue();    
+        counter2.decrement();
+        counter2.printValue();    
 
-        System.out.println("I am thinking of a number from 1 to 10.");
-        System.out.println("You must guess what it is in three tries.");
-
-        for (int i = 0; i < attempts; i++) {
-            System.out.print("Enter a guess: ");
-            int guess = scanner.nextInt();
-
-            if (guess == targetNumber) {
-                System.out.println("RIGHT! You have won the game.");
-                return;
-            } else {
-                int difference = Math.abs(guess - targetNumber);
-                if (difference >= 3) {
-                    System.out.println("cold");
-                } else if (difference == 2) {
-                    System.out.println("warm");
-                } else if (difference == 1) {
-                    System.out.println("hot");
-                } else 
-                System.out.println("wrong");
-            }
-        }
-
-        System.out.println("The correct number was " + targetNumber + ".");
-        System.out.println("You have lost the game.");
-
-        scanner.close();
+        DecreasingCounter counter3 = new DecreasingCounter(100);
+        System.out.println("\nPart 3:");
+        counter3.printValue();    
+        counter3.reset();
+        counter3.printValue();    
+        counter3.decrement();
+        counter3.printValue();    
     }
 }
+
+    
+    
