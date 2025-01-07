@@ -9,7 +9,7 @@ public class HealthStation {
         this.weighingsPerformed = 0;
     }
 
-    public int weigh(Person person) {
+    public double weigh(Person person) {
        
         this.weighingsPerformed++;
         

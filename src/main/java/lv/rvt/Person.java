@@ -26,6 +26,14 @@ public class Person {
         this.birthday = new SimpleDate(day, month, year);
     }
 
+    public double getWeight() {
+        return this.weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
     public boolean equals(Object compared) {
         if (this == compared) {
             return true;
