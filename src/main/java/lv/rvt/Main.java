@@ -7,21 +7,22 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.nio.file.StandardOpenOption;
 
+import java.util.ArrayList;
+
 public class Main {
-        public static void main(String[] args) {
-            A a = new A();
-            B b = new B();
-            C c = new C();
-    
-            a.a();
-            b.b();
-            c.c();
-    
-            C inheritedC = new C();
-    
-            inheritedC.a();
-            inheritedC.b();
-            inheritedC.c();
+    public static void printPersons(ArrayList<Person> persons) {
+        for (Person person : persons) {
+            System.out.println(person);
         }
     }
+
+    public static void main(String[] args) {
+        ArrayList<Person> persons = new ArrayList<>();
+        persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200));
+        persons.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
+
+        printPersons(persons);
+    }
+}
+
     
