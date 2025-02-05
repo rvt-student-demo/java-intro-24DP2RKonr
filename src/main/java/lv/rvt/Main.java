@@ -11,17 +11,14 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        ProductWarehouseWithHistory juice = new ProductWarehouseWithHistory("Juice", 1000.0, 1000.0);
-        juice.takeFromWarehouse(11.3);
-        juice.addToWarehouse(1.0);
+        Automobilis auto = new Automobilis("BMW", 120);
+        Laiva laiva = new Laiva("Yamaha", 30);
 
-        System.out.println(juice.getName()); 
-        System.out.println(juice); 
-        System.out.println(juice.history()); 
-
-        juice.printAnalysis();
+        System.out.println(auto.kustibasVeids());
+        System.out.println(laiva.kustibasVeids());
     }
 }
+
 
 
     
